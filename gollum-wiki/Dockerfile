@@ -18,10 +18,6 @@ RUN gem install gollum redcarpet github-markdown
 RUN apt-get clean
 RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-#git clone wiki data
-#RUN git config --global url."https://df4617bc49281a8c22a03298f10336c41ddf1500:@github.com/".insteadOf"https:/github.com/"
-#RUN git clone https://github.com/cdla/neurowiki-docs /docs
-
 EXPOSE 4567
 
 ENTRYPOINT ["gollum", "/docs"]
